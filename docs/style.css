@@ -1,0 +1,182 @@
+/* RESET GERAL - zera margens e paddings padrão do navegador */
+* {
+  margin: 0; /* remove margens padrão */
+  padding: 0; /* remove espaçamentos internos padrão */
+  box-sizing: border-box; /* inclui bordas e paddings no tamanho total do elemento */
+}
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* fontes usadas no texto */
+  line-height: 25px; /* altura da linha para espaçamento vertical */
+  background-color: #cecece; /* cor de fundo clara */
+  color: #333; /* cor do texto (cinza escuro) */
+  padding: 20px; /* espaçamento interno da página */
+}
+
+/* Estilos do cabeçalho */
+header {
+  display: flex; /* ativa layout flexbox para facilitar alinhamento */
+  align-items: center; /* alinha itens verticalmente no centro */
+  justify-content: space-between; /* espaça itens entre as extremidades (texto à esquerda, imagem à direita) */
+  background-color: #2c3e50; /* cor de fundo azul escuro */
+  color: white; /* cor do texto no cabeçalho */
+  padding: 40px 20px; /* espaçamento interno (vertical e horizontal) */
+  border-radius: 8px; /* cantos arredondados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* sombra sutil para dar profundidade */
+}
+
+/* Estilo da imagem com classe "photo" */
+.photo {
+  width: 200px; /* largura da foto */
+  height: 200px; /* altura igual à largura para ser quadrada */
+  object-fit: cover; /* recorta a imagem para preencher o espaço sem distorcer */
+  border-radius: 50%; /* deixa a foto em formato circular */
+}
+
+/* Estilo para imagens dentro do header (exemplo: foto menor) */
+header img {
+  width: 120px; /* tamanho menor para fotos dentro do cabeçalho */
+  border-radius: 8px; /* cantos arredondados */
+  margin-left: 20px; /* espaçamento à esquerda para separar do texto */
+}
+
+/* Título principal dentro do cabeçalho */
+header h1 {
+  font-size: 2em; /* tamanho da fonte maior */
+  letter-spacing: 2px; /* espaço entre letras para efeito visual */
+  margin-bottom: 5px; /* espaço abaixo do título */
+}
+
+/* Subtítulo dentro do cabeçalho */
+header h2 {
+  font-size: 1.1em; /* fonte um pouco maior que o normal */
+  font-weight: 300; /* fonte fina */
+  color: #dbe9f4; /* cor azul clarinha */
+}
+
+/* NAVBAR FIXA */
+nav {
+  margin-top: 25px;
+  padding: 25px;
+  position: sticky;
+  top: 0;
+  background-color: #2c3e50;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 5px 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #0a9396;
+}
+
+/* ROLAGEM SUAVE AO CLICAR NOS LINKS */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Estilos para as seções principais da página */
+section {
+  background-color: white; /* fundo branco */
+  margin: 25px auto; /* margem vertical e centraliza horizontalmente */
+  padding: 25px; /* espaçamento interno */
+  border-radius: 8px; /* cantos arredondados */
+  max-width: 850px; /* largura máxima para ficar legível */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sombra leve para destaque */
+}
+
+/* Adiciona uma transição suave para as mudanças de estilo */
+.sobre {
+    transition: transform 0.5s ease, box-shadow 0.3s ease; /* TRANSICAO: Faz a animação de "salto" e sombra ser suave */
+}
+
+/* Estilos aplicados quando o mouse passa por cima da seção com id="sobre" */
+.sobre:hover {
+    transform: translateY(-5px); /* EFEITO DE SALTO: Move a seção 5px para cima */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte para dar a sensação de "flutuar" */
+    background-color: #cecece; /* MUDANCA DE COR: Muda a cor de fundo para um cinza mais claro */
+    border-left: 5px solid #0a9396; /* deixa o canto eqsquerdo do texto com uma bordinha */
+}
+
+
+/* Estilo geral para todos os títulos h2 */
+h2 {
+  color: #2c3e50; /* cor azul escuro */
+  margin-bottom: 15px; /* espaço abaixo do título */
+  border-bottom: 2px solid #dbe9f4; /* linha reta abaixo do texto */
+  padding-bottom: 5px; /* espaço entre texto e linha */
+}
+
+/* Estilo para listas não ordenadas */
+ul {
+  margin-left: 20px; /* recuo à esquerda para listas */
+  margin-top: 10px; /* espaço acima da lista */
+}
+
+/* Espaçamento entre itens da lista */
+ul li {
+  margin-bottom: 6px; /* espaço entre itens da lista */
+}
+
+/* Estilos para parágrafos dentro da seção "contato" */
+.contato p {
+  margin-bottom: 6px; /* espaçamento abaixo dos parágrafos */
+}
+
+/* Estilos para links dentro da área "redes" (redes sociais, por exemplo) */
+.redes a {
+  display: inline-block; /* deixa o link com comportamento de bloco inline (para poder aplicar margin) */
+  margin-right: 15px; /* espaço à direita para separar links */
+  color: #2c3e50; /* cor azul escuro */
+  text-decoration: none; /* remove sublinhado padrão */
+  font-weight: bold; /* deixa o texto em negrito */
+  transition: color 0.3s; /* transição suave para mudança de cor no hover */
+}
+
+/* Efeito ao passar o mouse nos links da seção redes */
+.redes a:hover {
+  color: #0a9396; /* muda a cor para azul esverdeado */
+  text-decoration: underline; /* sublinha o texto */
+}
+
+/* Estilo do rodapé */
+footer {
+  text-align: center; /* texto centralizado */
+  padding: 20px; /* espaçamento interno */
+  margin-top: 30px; /* espaço acima do rodapé */
+  background-color: #2c3e50; /* fundo azul escuro */
+  color: white; /* texto branco */
+  border-radius: 8px; /* cantos arredondados */
+}
+
+
+
+/* Responsividade para telas pequenas (máximo 600px de largura) */
+@media (max-width: 600px) {
+  section {
+    padding: 15px; /* diminui o espaçamento interno das seções em telas pequenas */
+  }
+}
